@@ -1,0 +1,378 @@
+html{
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+.col-form-label{
+    width:300px;
+}
+.heading{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    width:100%;
+    font-size:30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alert{
+    margin-top:10px;
+    width:90%;
+align-self: center;
+}
+.form-group{
+    margin-bottom: 0;
+}
+.form-control{
+    width:90%;
+   
+}
+
+.calc-card{
+    width:550px;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+}
+
+.calc-row{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+}
+.calc-label{
+    padding-left: 10px;
+    width:100px;
+    font-size:18px;
+    font-weight: 500;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.form-control{
+    width:100%;
+    
+}
+
+.calc-cont{
+    padding:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#loading{
+display:flex;
+justify-content: center;
+align-items: center;
+align-self: center;
+
+}
+#loading img{
+ 
+    margin-left:45px;
+    }
+
+.form-group-1{
+    padding:10px;
+}
+#results{
+    align-self: center;
+    width:95%;
+    padding:10px;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after{
+    background-color: rgb(34, 183, 34);
+    border-radius: 50%;
+}
+.custom-control-label {
+    position: relative;
+    margin-bottom: 0;
+    vertical-align: top;
+    font-size: 17px;
+}
+
+#item-name::placeholder{
+    color:rgb(82, 76, 76);
+}
+#item-calories::placeholder{
+    color:rgb(82, 76, 76);
+}
+
+.card-diary{
+    width:auto;
+    flex-direction: column;
+    display:flex;
+   justify-content: center;
+   align-items: center;
+background-color: bisque;
+padding:15px;
+
+}
+.diary-cont-1{
+    padding:10px;
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card-diary h2{
+    font-size:25px;
+    flex-direction: row;
+    display:flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:-5px;
+}
+.card-diary h3{
+    font-size:22px;
+    flex-direction: row;
+    display:flex;
+   justify-content: center;
+   align-items: center;
+   margin-top:-5px;
+}
+#cal-create{
+    width:90%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    align-items: center;
+    
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+
+@media only screen and (max-width: 580px) {
+    .heading{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding:10px;
+        width:100%;
+        font-size:20px;
+    }
+    
+    .alert{
+        font-size:14px;
+    }
+    .form-control{
+        width:100%;
+        
+    }
+    .appear-text{
+        font-size: 1.1rem;
+    }
+    .calc-label-1{
+        margin-left:-7px;
+        font-size:15px;
+       
+    }
+    .calc-label{
+        width:120px;
+        font-size:16px;
+        font-weight: 500;
+    }
+   .calc-cont{
+    padding:0px;
+    margin-top:50px;
+   }
+    .calc-card{
+        width:100%;
+        background-color:white;
+        display:flex;
+        flex-direction: column;
+    }
+    .cont-card{
+        width:95%;
+    }
+   
+    #loading img{
+        width:100%;
+        margin-left:0px;
+        }
+        .heading{
+            font-size:30px;
+        }
+        .calc-cont{
+            margin-top:40px;
+        }
+}
+
+@media only screen and (max-width: 455px) {
+#cal-create {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+}
+
+@media only screen and (max-width: 390px) {
+    .appear-text{
+        font-size: 0.95rem;
+    }
+    .heading{
+        font-size:25px;
+    }
+    .calc-row{
+        margin-left:10px;
+    }
+    .form-control{
+        font-size:0.88rem
+    }
+   
+    input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #9e9e9e;
+        border-radius: 0;
+        outline: none;
+        height: 3rem;
+        width: 100%;
+        font-size: 13px;
+        margin: 0 0 8px 0;
+        padding: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-transition: border .3s, -webkit-box-shadow .3s;
+        transition: border .3s, -webkit-box-shadow .3s;
+        transition: box-shadow .3s, border .3s;
+        transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+
+    }
+    .calc-label{
+        width:120px;
+        font-size:15px;
+        font-weight: 500;
+    }
+    .custom-control-label{
+        font-size:15px;
+        font-weight: 500;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .alert{
+        font-size:13px;
+    }
+    .btn{
+        font-size:15px;
+    }
+    .appear-text{
+        font-size: 0.88rem;
+        font-weight: 600;
+    }
+    .heading{
+        font-size:23px;
+    }
+    #form-radio{
+        display:flex;
+        flex-direction: row;
+    }
+    .calc-row{
+        margin-left:2px;
+    }
+    .form-control{
+        font-size:0.8rem
+    }
+    .calc-label{
+        width:120px;
+        font-size:15px;
+        font-weight: 500;
+        
+    }
+}
+@media only screen and (max-width: 310px) {
+    .calc-row{
+        height:40px;
+    }
+    .heading{
+        font-size:23px;
+    }
+    .form-control{
+        font-weight: 500;
+    }
+    #form-radio{
+        display:flex;
+        flex-direction: row;
+    }
+    .calc-row{
+        margin-left:2px;
+    }
+    .form-control{
+        font-size:0.68rem
+    }
+    .calc-label{
+        font-size:12px;
+        font-weight: 700;
+    }
+    .custom-control-label{
+        font-size:12px;
+        font-weight: 500;
+    }
+
+
+    input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #9e9e9e;
+        border-radius: 0;
+        outline: none;
+        height: 3rem;
+        width: 100%;
+        font-size: 11px;
+        margin: 0 0 8px 0;
+        padding: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-transition: border .3s, -webkit-box-shadow .3s;
+        transition: border .3s, -webkit-box-shadow .3s;
+        transition: box-shadow .3s, border .3s;
+        transition: box-shadow .3s, border .3s, -webkit-box-shadow .3s;
+
+
+}
+@media only screen and (max-width: 285px) {
+    .alert{
+        font-size:12px;
+    }
+    .form-control{
+        font-size:0.66rem;
+        font-weight:10000;
+    }
+    .calc-label{
+        width:120px;
+        font-size:15px;
+        font-weight: 500;
+        margin-left:-5px;
+    }
+    .calc-label-resp{
+        margin-left:15px;
+    }
+}
+}
+
