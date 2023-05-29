@@ -1,4 +1,4 @@
-// sorry back devs 
+// sorry back devs
 
 const StorageCtrl = (function () {
   // public methods
@@ -52,17 +52,15 @@ const StorageCtrl = (function () {
   };
 })();
 
-
 //Iten Controller
 const ItemCtrl = (function () {
   //item Constructor
-  const curDate = new Date().toLocaleDateString()
+  const curDate = new Date().toLocaleDateString();
   const Item = function (name, calories, grams) {
-
     this.id = id.next().value;
     this.calories = calories;
     this.name = name;
-    this.date = curDate
+    this.date = curDate;
   };
 
   function* genID() {
@@ -170,8 +168,8 @@ const UICrtl = (function () {
                 ><i class="edit-item fa fa-pencil"></i
               ></a>
               <strong class="strong-st">${item.name}</strong>
-              <em class="em-st">${item.calories} გრამი</em>
-              <em class="em-st">${parseInt(item.calories) * 2} კალორია</em>
+              <em class="em-st">${item.calories} gram</em>
+              <em class="em-st">${parseInt(item.calories) * 2} calorie</em>
             </li>
         `;
       });
@@ -204,7 +202,13 @@ const UICrtl = (function () {
       li.className = "collection-item";
       li.id = `item-${item.id}`;
       li.innerHTML = `
-        <a href="" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a><strong class="strong-st">${item.name}</strong>  <em class="em-st">${item.calories} გრამი</em>  <em class="em-st">${parseInt(item.calories) * 2} კალორია</em>
+        <a href="" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a><strong class="strong-st">${
+          item.name
+        }</strong>  <em class="em-st">${
+        item.calories
+      } gram </em>  <em class="em-st">${
+        parseInt(item.calories) * 2
+      } calorie</em>
        
         `;
       document
@@ -219,7 +223,8 @@ const UICrtl = (function () {
       document.querySelector(UISelectors.itemList).style.display = status;
     },
     updateTotCalories: function (totalCal) {
-      document.querySelector(UISelectors.totalCalories).innerHTML = totalCal * 2;
+      document.querySelector(UISelectors.totalCalories).innerHTML =
+        totalCal * 2;
     },
     addItemToForm: function () {
       const currentItem = ItemCtrl.getCurrentItem();
@@ -236,7 +241,13 @@ const UICrtl = (function () {
         const liID = li.getAttribute("id");
         if (liID === `item-${parseInt(item.id)}`) {
           li.innerHTML = `
-            <a href="" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a><strong class="strong-st">${item.name}</strong>  <em class="em-st">${item.calories} გრამი</em>  <em class="em-st">${parseInt(item.calories) * 2} კალორია</em>
+            <a href="" class="secondary-content"><i class="edit-item fa fa-pencil"></i></a><strong class="strong-st">${
+              item.name
+            }</strong>  <em class="em-st">${
+            item.calories
+          } gram</em>  <em class="em-st">${
+            parseInt(item.calories) * 2
+          } calorie</em>
             
             `;
         }
@@ -453,50 +464,53 @@ const App = (function (ItemCtrl, StorageCtrl, UICrtl) {
     },
   };
 })(ItemCtrl, StorageCtrl, UICrtl);
-var b = 0
-let calendar = document.createElement("div")
+var b = 0;
+let calendar = document.createElement("div");
 function showCalendar() {
-  b += 1
-  let a = JSON.parse(localStorage.getItem('items'))
+  b += 1;
+  let a = JSON.parse(localStorage.getItem("items"));
 
   // console.log(a[0].date)
-  let calcCont = document.getElementById("cal-create")
-  calendar.classList.add("diary-cont-1")
-  
-  if(a !== null){
-  for (let i = 0; i < a.length; i++) {
-    var element = a[i].date;
-  }}
+  let calcCont = document.getElementById("cal-create");
+  calendar.classList.add("diary-cont-1");
+
+  if (a !== null) {
+    for (let i = 0; i < a.length; i++) {
+      var element = a[i].date;
+    }
+  }
 
   // console.log(typeof element)
-  const currDate = new Date().toLocaleDateString()
-  if(a !== null){
-  let el = '<table class="styled-table"><thead><tr><th>თარიღი</th><th>პროდუქტი</th><th>კალორია</th></tr></thead><tbody>' + a.map(e => `<tr><td>${e.date}</td><td>${e.name}</td><td>${parseInt(e.calories) * 2}</td></tr>`) + '</tbody></table> <button class=" clear-btn btn red lighten-1"onclick = "deleteButton()">წაშალე</button>'
-  if (element === currDate) {
-    calendar.innerHTML = el;
+  const currDate = new Date().toLocaleDateString();
+  if (a !== null) {
+    let el =
+      '<table class="styled-table"><thead><tr><th>date</th><th>product</th><th>calorie</th></tr></thead><tbody>' +
+      a.map(
+        (e) =>
+          `<tr><td>${e.date}</td><td>${e.name}</td><td>${
+            parseInt(e.calories) * 2
+          }</td></tr>`
+      ) +
+      '</tbody></table> <button class=" clear-btn btn red lighten-1"onclick = "deleteButton()">Delete</button>';
+    if (element === currDate) {
+      calendar.innerHTML = el;
+    }
   }
-}
- 
 
   // console.log(calendar)
 
-
-  calcCont.appendChild(calendar)
-  let res = String(document.getElementsByClassName('cal-date')); //.value undefine but why ???
+  calcCont.appendChild(calendar);
+  let res = String(document.getElementsByClassName("cal-date")); //.value undefine but why ???
   // console.log(res, typeof res)
-  let sample = calendar.getElementsByClassName('cal-date');
-  
+  let sample = calendar.getElementsByClassName("cal-date");
 }
-
-
-
 
 window.onbeforeunload = function (e) {
   localStorage.clear();
 };
 
 function deleteButton() {
-  calendar.innerHTML = ' '
+  calendar.innerHTML = " ";
 }
 
 App.init();

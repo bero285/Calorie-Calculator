@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="style-new3.css" />
     <link rel="stylesheet" href="style-new4.css" />
     <link rel="stylesheet" href="calendar.css" />
-    <title>კალორიების კალკულატორი</title>
+    <title>Calorie Calculator</title>
 
     
   </head>
@@ -51,23 +51,23 @@
       <div class="calc-cont">
         <div class="cont-card">
           <div class="card calc-card">
-            <h1 class="heading">კალორიების კალკულატორი</h1>
+            <h1 class="heading">Calorie Calculator</h1>
             <form id="calorie-form">
               <div class="calc-row">
-                <label for="age" class="calc-label">ასაკი</label>
+                <label for="age" class="calc-label">age</label>
                 <div class="col-sm-10">
                   <input
                     type="number"
                     class="form-control"
                     id="age"
-                    placeholder="წლოვანება 15-80"
+                    placeholder="age 15-80"
                   />
                 </div>
               </div>
   
               <fieldset class="form-group">
                 <div class="calc-row calc-label-resp">
-                  <label class="calc-label">სქესი</label>
+                  <label class="calc-label">gender</label>
                   <div class="col-sm-10" id="form-radio">
                     <div
                       class="custom-control custom-radio custom-control-inline"
@@ -80,7 +80,7 @@
                         checked="checked"
                       />
                       <label class="custom-control-label" for="male"
-                        >კაცი</label
+                        >male</label
                       >
                     </div>
                     <div
@@ -93,7 +93,7 @@
                         class="custom-control-input"
                       />
                       <label class="custom-control-label" for="female"
-                        >ქალი</label
+                        >female</label
                       >
                     </div>
                   </div>
@@ -101,36 +101,36 @@
               </fieldset>
   
               <div class="calc-row">
-                <label for="weight" class="calc-label">წონა</label>
+                <label for="weight" class="calc-label">wheight</label>
                 <div class="col-sm-10">
                   <input
                     type="number"
                     class="form-control"
                     id="weight"
-                    placeholder="კილოგრამებში"
+                    placeholder="kg"
                   />
                 </div>
               </div>
   
               <div class="calc-row">
-                <label for="height" class="calc-label">სიმაღლე</label>
+                <label for="height" class="calc-label">height</label>
                 <div class="col-sm-10">
                   <input
                     type="number"
                     class="form-control"
                     id="height"
-                    placeholder="სანტიმეტრებში"
+                    placeholder="centimetre"
                   />
                 </div>
               </div>
   
               <div class="calc-row">
-                <label class="calc-label">აქტივობა</label>
+                <label class="calc-label">Goal</label>
                 <div class="col-sm-10">
                   <select class="form-control" id="list">
-                    <option selected value="1">შენარჩუნება</option>
-                    <option value="2">დაკლება</option>
-                    <option value="3">მომატება</option>
+                    <option selected value="1">keep wheight</option>
+                    <option value="2">decrease wheight</option>
+                    <option value="3">increase wheight</option>
                   </select>
                 </div>
               </div>
@@ -138,7 +138,7 @@
               <div class="form-group form-group-1">
                 <input
                   type="submit"
-                  value="გამოთვლა"
+                  value="Calculate"
                   class="btn btn-dark btn-block green"
                 />
               </div>
@@ -173,38 +173,38 @@
       <div class="container cont-2">
         <div class="card">
           <div class="card-content">
-            <span class="card-title">აღრიცხე პროდუქტი / კერძი</span>
+            <span class="card-title">Product / Dish</span>
 
             <form class="col">
               <div class="row">
                 <div class="input-field col s6">
                   <input
                     type="text"
-                    placeholder="შეიყვანე პროდუქტი"
+                    placeholder="Product"
                     id="item-name"
                   />
                 </div>
                 <div class="input-field col s6">
                   <input
                     type="number"
-                    placeholder="შეიყვანე გრამები"
+                    placeholder="gram"
                     id="item-calories"
                   />
                 </div>
               </div>
               <div class="row btn-container">
                 <button class="btn add-btn green darken-3">
-                  <i class="fa fa-plus"></i> დაამატე პროდუქტი
+                  <i class="fa fa-plus"></i> Add Product
                 </button>
-                <a href="#" class="clear-btn btn red lighten-1">გასუფთავება</a>
+                <a href="#" class="clear-btn btn red lighten-1">Clear</a>
                 <button class="btn update-btn orange">
-                  <i class="fa fa-pencil-square-o"></i> განახლება
+                  <i class="fa fa-pencil-square-o"></i> Update
                 </button>
                 <button class="btn delete-btn red">
-                  <i class="fa fa-remove"></i> პროდუქტის წაშლა
+                  <i class="fa fa-remove"></i> Delete Product
                 </button>
                 <button class="btn back-btn grey">
-                  <i class="fa fa-chevron-circle-left"></i> უკან
+                  <i class="fa fa-chevron-circle-left"></i> Back
                 </button>
               </div>
             </form>
@@ -214,10 +214,10 @@
         <!-- Calories count -->
         <div class="save-info">
           <h3 class="center-align">
-            ჯამური კალორია: <span class="total-calories">0</span>
+           Full Calories: <span class="total-calories">0</span>
           </h3>
           <button class="btn green btn-block btn-dark" onclick="showCalendar()">
-            შენახვა
+            Save
           </button>
         </div>
         <!-- Item list -->
